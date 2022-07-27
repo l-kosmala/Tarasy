@@ -130,7 +130,6 @@ section {
 }
 
 /* work section */
-
 .image-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -165,8 +164,6 @@ section {
 /* opinion section */
 
 .opinions {
-    /* Tymczasowo */
-    /* height: 100vh; */
     text-align: center;
 }
 
@@ -176,80 +173,69 @@ section {
     color: #000;
 }
 
+/* test */
 
-.blockquote-wrapper {
+.opinion__box {
     display: flex;
-    padding: 0 20px;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
 }
 
-.blockquote {
+.review {
+    color: #323031;
+    font-size: 1.4rem;
+    padding: 3rem;
     position: relative;
-    max-width: 620px;
-    margin: 80px auto;
-    align-self: center;
+    background-color: #fff;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, .05);
+    overflow: hidden;
+    flex: 0 0 50%;
+    flex-basis: 500px;
 }
 
-.blockquote h1 {
-    position: relative;
-    /* for pseudos */
-    color: #55c57a;
-    font-size: 2.8rem;
-    font-weight: normal;
-    line-height: 1;
-    margin: 0;
-    border: 2px solid #fff;
-    border: solid 2px;
-    border-radius: 20px;
-    padding: 25px;
-}
-
-.blockquote h1:after {
-    content: "";
+.review::before {
+    content: "\201c";
     position: absolute;
-    border: 2px solid #55c57a;
-    border-radius: 0 50px 0 0;
-    width: 60px;
-    height: 60px;
-    bottom: -60px;
-    left: 50px;
-    border-bottom: none;
-    border-left: none;
-    z-index: 3;
+    left: -.9rem;
+    top: -2.5rem;
+    font-size: 20rem;
+    color: #D9DCD6;
 }
 
-.blockquote h1:before {
-    content: "";
-    position: absolute;
-    width: 80px;
-    border: 6px solid #fff;
-    bottom: -3px;
-    left: 50px;
+.review__text {
+    margin-bottom: 2rem;
     z-index: 2;
-}
-
-@media all and (min-width: 600px) {
-    .blockquote h1 {
-        font-size: 3rem;
-        line-height: 1.2;
-    }
-}
-
-.blockquote h4 {
     position: relative;
-    color: #000;
-    font-size: 1.3rem;
-    font-weight: 400;
-    line-height: 1.2;
-    margin: 0;
-    padding-top: 15px;
-    z-index: 1;
-    margin-left: 150px;
-    padding-left: 12px;
 }
 
+.review__person {
+    display: flex;
+    align-items: center;
+}
 
-.blockquote h4:first-letter {
-    margin-left: -12px;
+.review__info {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: auto;
+}
+
+.review__info--name {
+    flex: 0 0 80%;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: -.5rem;
+}
+
+.review__info--name--date {
+    font-size: .9rem;
+}
+
+.review__rating {
+    color: #323031;
+    font-size: 2.2rem;
+    font-weight: 300;
 }
 
 /* shop section */
