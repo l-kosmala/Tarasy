@@ -13,8 +13,10 @@ dark green: #28b485; */
     box-sizing: border-box;
 }
 
-html {
+html,
+body {
     font-size: 62.5%;
+    scroll-behavior: smooth;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -78,7 +80,7 @@ html {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #000;
+    color: rgb(172, 81, 2);
 
     margin: 0 1rem;
     padding: 2rem;
@@ -107,7 +109,7 @@ section {
     align-items: center; */
 
     background-image: linear-gradient(to right bottom,
-            hsla(28, 98%, 34%, 0.8),
+            rgba(172, 81, 2, 0.8),
             rgba(255, 127, 7, 0.8)),
         url(../img/deck_decking_wood.jpg);
     background-size: cover;
@@ -186,6 +188,10 @@ section {
 }
 
 /* work section */
+.work {
+    padding-bottom: 8rem;
+}
+
 .image-gallery {
     display: flex;
     flex-wrap: wrap;
