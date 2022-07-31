@@ -18,7 +18,7 @@
         <span class="logo"><img src="img/amj_bouw.svg" alt="" srcset=""></span>
         <ul>
             <li><a href="#home" class="link__item">O firmie</a></li>
-            <li><a href="#shop" class="link__item">Sklep</a></li>
+            <li><a href="#shop" class="link__item">Oferta</a></li>
             <li><a href="#work" class="link__item">Galeria</a></li>
             <li><a href="#opinions" class="link__item">Opinie</a></li>
             <li><a href="#contact" class="link__item">Kontakt</a></li>
@@ -53,23 +53,26 @@
                     zakończenia
                     prac.</p>
             </div>
-            <!--
-                <div class="composition">
-                    <img src="img/142535848-crop-img-0795.jpg" alt="" class="composition__photo composition__photo--1">
-                    <img src="img/142306262-crop-img-0891.jpg" alt="" class="composition__photo composition__photo--2">
-                    <img src="img/144019658-crop-img-0929.jpg" alt="" class="composition__photo composition__photo--3">
-                </div> -->
-            <!-- </div> -->
         </section>
         <section class="shop" id="shop">
-            <h2 class="shop__header--main wrapper">Sklep</h2>
+            <h2 class="shop__header--main wrapper">Oferta</h2>
             <div class="line"></div>
             <p class="shop__desc">Oferujemy następujące rodzaje drzewa</p>
-            <div class="myTabs">
-                <input type="radio" id="tab_1" name="myTabs" checked="checked">
-                <label for="tab_1">Drewno lite C24</label>
-                <div class="tab">
-                    <h3>Drewno lite C24</h3>
+            <div class="wrapper--offer">
+                <div class="offer--header">
+                    Oferujemy następujące rodzaje drzewa
+                </div>
+                <input type="radio" name="slider" id="c24" checked>
+                <input type="radio" name="slider" id="bsh">
+                <input type="radio" name="slider" id="kvh">
+                <nav>
+                    <label for="c24" class="shop--c24">Drewno lite C24</label>
+                    <label for="bsh" class="shop--bsh">BSH</label>
+                    <label for="kvh" class="shop--kvh">KVH®</label>
+                    <div class="slider"></div>
+                </nav>
+                <section class="content content--c24 content--1">
+                    <div class="title">Drewno lite c24</div>
                     <p>Drewno konstrukcyjne ze świerku — certyfikowane w klasie C24. Nie jest łączone na mikrowczepy.
                         Według obowiązujących przepisów i norm budowlanych to materiał wymagany do stosowania na
                         konstrukcje dachowe, stropy, ściany i domy szkieletowe. Drewno jest strugane i suszone, a jego
@@ -79,12 +82,9 @@
                         szkieletowego. Jest bardzo wytrzymałe i zachowuje znakomitą sztywność, dzięki czemu świetnie
                         sprawdza się do wznoszenia domów drewnianych. Każda sztuka posiada fabryczne oznakowanie klasy
                         wytrzymałości.</p>
-                </div>
-
-                <input type="radio" id="tab_2" name="myTabs" checked="checked">
-                <label for="tab_2">BSH</label>
-                <div class="tab">
-                    <h3>BSH</h3>
+                </section>
+                <section class="content content--bsh content--2">
+                    <div class="title">BSH</div>
                     <p>Materiał z najwyższej półki, który zapewnia najlepsze możliwości wymiarowe i nośne. Posiada
                         również wysokie walory estetyczne. Powstaje z co najmniej trzech równolegle klejonych, suszonych
                         desek lub lameli z drewna iglastego. Przeznaczony do stosowania w konstrukcjach nośnych o dużych
@@ -100,12 +100,9 @@
                         szkieletowego. Jest bardzo wytrzymałe i zachowuje znakomitą sztywność, dzięki czemu świetnie
                         sprawdza się do wznoszenia domów drewnianych. Każda sztuka posiada fabryczne oznakowanie klasy
                         wytrzymałości.</p>
-                </div>
-
-                <input type="radio" id="tab_3" name="myTabs" checked="checked">
-                <label for="tab_3">KVH®</label>
-                <div class="tab">
-                    <h3>KVH®</h3>
+                </section>
+                <section class="content content--kvh content--3">
+                    <div class="title">KVH®</div>
                     <p>Przedstawiamy nowoczesny produkt z drewna iglastego, posiadający fazowane krawędzie i długość 13
                         m. To czterostronnie strugane drewno konstrukcyjne, które zostało wysuszone w komorach
                         suszarniczych do 15% wilgotności i przesortowane pod względem wytrzymałości.</p>
@@ -128,8 +125,47 @@
                     <p>kiedy można lub trzeba zrezygnować z chemicznego zabezpieczenia drewna</p>
                     <p>elementy konstrukcyjne, które wymagają wysokiej stabilności wymiarowej (± 1 mm)</p>
                     </p>
-                </div>
+                </section>
+            </div>
+            <p class="shop__desc">W Naszej ofercie jest wykonywanie tarasów i elewacji</p>
 
+            <div id="slider">
+                <input type="radio" name="slide" id="slide1" checked>
+                <input type="radio" name="slide" id="slide2">
+                <input type="radio" name="slide" id="slide3">
+                <div id="slides">
+                    <div id="overflow">
+                        <div class="inner">
+                            <div class="slide">
+                                <div class="slide__1">
+                                    <div class="slide--content">
+                                        <h3>slide1</h3>
+                                        <p>content for slide 1</p>
+                                    </div>
+                                    <div class="slide--content">
+                                        <h3>slide2</h3>
+                                        <p>content for slide 2</p>
+                                    </div>
+                                    <div class="slide--content">
+                                        <h3>slide3</h3>
+                                        <p>content for slide 3</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="controls">
+                        <label for="slide1"></label>
+                        <label for="slide2"></label>
+                        <label for="slide3"></label>
+                    </div>
+                    <div id="bullets">
+                        <label for="slide1"></label>
+                        <label for="slide2"></label>
+                        <label for="slide3"></label>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="work" id="work">
             <h2 class="work__header--main">Galeria</h2>
@@ -406,6 +442,7 @@
     <!-- javascript -->
     <script src="/js/app.js"></script>
     <script src="/js/lightbox-plus-jquery.min.js"></script>
+    <script src="main.js" type="text/javascript"></script>
 </body>
 
 </html>

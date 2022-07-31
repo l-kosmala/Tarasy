@@ -4,6 +4,7 @@ medium green: #55c57a;
 dark green: #28b485; */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;1,200&display=swap');
 
 *,
 *::before,
@@ -17,7 +18,8 @@ html,
 body {
     font-size: 62.5%;
     scroll-behavior: smooth;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Poppins', sans-serif;
 }
 
 .wrapper {
@@ -26,7 +28,7 @@ body {
 }
 
 .line {
-    background-color: #000;
+    background-color: rgb(172, 81, 2);
     display: block;
     margin: 10px auto 25px;
     width: 79px;
@@ -205,7 +207,7 @@ section {
     text-align: center;
     font-size: 4rem;
     font-weight: 400;
-    color: #000;
+    color: rgb(172, 81, 2);
 }
 
 .image-gallery--item {
@@ -234,20 +236,19 @@ section {
 
 .opinions {
     text-align: center;
-
-    background-image: linear-gradient(to right bottom,
+    /* background-image: linear-gradient(to right bottom,
             hsla(28, 98%, 34%, 0.8),
             rgba(255, 127, 7, 0.8)),
-        url(../img/wood_wall_board.jpg);
+        url(../img/wood_wall_board.jpg); */
     background-size: cover;
     background-position: bottom;
-    padding: 15rem 0;
+    margin-bottom: 15rem;
 }
 
 .opinions__header--main {
     font-size: 4rem;
     font-weight: 400;
-    color: #000;
+    color: rgb(172, 81, 2);
 }
 
 .opinion__box {
@@ -260,13 +261,14 @@ section {
 .review {
     color: #323031;
     font-size: 1.4rem;
-    padding: 3rem;
+    padding: 5rem 0;
     position: relative;
     background-color: rgba(255, 255, 255, 0.601);
-    box-shadow: 0 2rem 5rem rgba(0, 0, 0, .05);
+    box-shadow: 1px 5px 10px rgb(172, 81, 2);
     overflow: hidden;
     flex: 0 0 50%;
     flex-basis: 500px;
+    border-radius: 5px;
 }
 
 .review::before {
@@ -275,7 +277,7 @@ section {
     left: -.9rem;
     top: -2.5rem;
     font-size: 20rem;
-    color: rgba(255, 127, 7, 0.8);
+    color: rgb(172, 81, 2);
 }
 
 .review__text {
@@ -316,71 +318,194 @@ section {
 /* shop section */
 
 .shop {
-    background-color: #ccc;
-    height: 150vh;
+    /* height: 150vh; */
     margin-top: 60px;
+    /* background-color: rgba(255, 127, 7, 0.8); */
+    /* overflow: hidden; */
 }
 
 .shop__header--main {
     text-align: center;
     font-size: 4rem;
     font-weight: 400;
-    color: #000;
+    color: rgb(172, 81, 2);
+
+    padding-top: 5rem;
 }
 
 .shop__desc {
     text-align: center;
     font-size: 3rem;
     font-weight: 400;
-    color: #000;
+    color: rgb(172, 81, 2);
 }
 
-.myTabs {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 25px;
-}
-
-.myTabs input[type="radio"] {
-    display: none;
-}
-
-.myTabs label {
-    padding: 25px;
-    background-color: #e2e2e2;
-    font-size: 2.2rem;
-}
-
-.myTabs .tab {
+.wrapper--offer {
+    max-width: 700px;
     width: 100%;
-    padding: 20px;
+    margin: 50px auto;
     background-color: #fff;
-    order: 1;
+    padding: 25px 30px 30px 30px;
+    border-radius: 5px;
+    box-shadow: 1px 10px 30px rgb(172, 81, 2);
+}
+
+.offer--header {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.wrapper--offer nav {
+    position: relative;
+    height: 50px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.wrapper--offer nav label {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    /* color: rgb(172, 81, 2); */
+    color: #000;
+    font-size: 1.7rem;
+    z-index: 1;
+}
+
+#c24:checked~nav label.shop--c24 {
+    color: #fff;
+}
+
+#bsh:checked~nav label.shop--bsh {
+    color: #fff;
+}
+
+#kvh:checked~nav label.shop--kvh {
+    color: #fff;
+}
+
+input[type="radio"] {
     display: none;
 }
 
-.myTabs .tab h3 {
-    font-size: 35px;
+.wrapper--offer nav .slider {
+    position: absolute;
+    height: 100%;
+    width: 35%;
+    background-color: rgb(172, 81, 2);
+    border-radius: 5px;
+    z-index: 0;
+    left: 0;
+    bottom: 0;
+    transition: all .3s ease;
 }
 
-.tab p {
-    font-size: 1.6rem;
-    line-height: 2rem;
-    padding: 2rem 0;
+#bsh:checked~nav .slider {
+    left: 35%;
 }
 
-.tab h5 {
-    font-size: 1.8rem;
+#kvh:checked~nav .slider {
+    left: 70%;
 }
 
-.myTabs input[type="radio"]:checked+label+.tab {
+section .content {
+    display: none;
+}
+
+#c24:checked~section.content--1 {
     display: block;
 }
 
-.myTabs input[type="radio"]:checked+label {
-    background-color: #fff;
+#bsh:checked~section.content--2 {
+    display: block;
+}
+
+#kvh:checked~section.content--3 {
+    display: block;
+}
+
+section .content .title {
+    font-size: 2rem;
+    margin: 30px 0 10px 0;
+}
+
+/* tarasy */
+
+#slider {
+    margin: 0 auto;
+    width: 800px;
+    max-width: 100%;
+    text-align: center;
+}
+
+#slider input[type="radio"] {
+    display: none;
+}
+
+#slider label {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#slides {
+    padding: 30px;
+    border: 3px solid #ccc;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+#overflow {
+    width: 100%;
+    overflow: hidden;
+}
+
+#slide1:checked~#slides .inner {
+    margin-left: 0;
+}
+
+#slide2:checked~#slides .inner {
+    margin-left: -100%;
+}
+
+#slide3:checked~#slides .inner {
+    margin-left: -200%;
+}
+
+#slides .inner {
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    width: 300%;
+    line-height: 0;
+    height: 200px;
+}
+
+#slides .slide {
+    width: 33%;
+    float: left;
+    display: block;
+    height: 100%;
+    color: #fff;
+    background: rgb(172, 81, 2);
+}
+
+#slides .slide__1,
+#slides .slide__2,
+#slides .slide__3 {
+    background: rgb(172, 81, 2)
+}
+
+#slides .slide--content h3 {
+    font-size: 3rem;
+}
+
+#slides .slide--content p {
+    font-size: 2rem;
 }
 
 /* contact section */
@@ -391,7 +516,7 @@ section {
     background-image: linear-gradient(to right bottom,
             hsla(28, 98%, 34%, 0.8),
             rgba(255, 127, 7, 0.8)),
-        url(../img/wood_wall_board.jpg);
+        url(../img/deck_decking_wood.jpg);
     background-size: cover;
     background-position: bottom;
 
